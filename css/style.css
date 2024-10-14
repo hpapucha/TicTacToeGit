@@ -1,0 +1,167 @@
+body{
+    background-color: #c79f00;
+    background-image: url(alum.png);
+    font-family: Helvetica, sans-serif;
+    height:100%;
+    width:100%;
+}
+
+h1{
+    color:whitesmoke;
+    position: relative;
+    left: 35%;
+    text-shadow:3px 1px 0 #666;
+}
+
+nav {
+    position: relative;
+    left: 35%;
+    display: grid;
+    grid-template-columns: repeat(3, 5em);
+    grid-gap: 0.5em;
+    height:100%;
+    width:100%;
+    margin-bottom: 0.3em;
+
+}
+
+#turn {
+    position: relative;
+    padding: 2%;
+    height: 25px;
+    background-color:#990033;
+    width: 12em;
+    margin-bottom: 1em;
+    color:whitesmoke;
+    font-size: 20px;
+}
+#current_player{
+    position: relative;
+    left: 45%;
+    padding: 2%;
+    height: 25px;
+    background-color:#990033;
+    width: 6.7em;
+    margin-bottom: 1em;
+    color:whitesmoke;
+    font-size: 20px;
+}
+
+
+.board {
+    position: relative;
+    left: 35%;
+    display: grid;
+    grid-template-columns: repeat(3, 5em);
+    grid-gap: 0.5em;
+    height:100%;
+    width: 100%;
+
+}
+
+.board > div {
+    border: 2px solid #990033;
+    height:5em;
+    width:5em;
+    text-align: center;
+
+}
+
+.player1 {
+   background-color: red;
+}
+.player2 {
+   background-color: blue;
+}
+
+.board > div:hover {
+    transform: scale(1.1);
+}
+
+.info_field {
+    position: relative;
+    left: 35%;
+    display: grid;
+    grid-template-columns: repeat(3, 5em);
+    grid-gap: 0.5em;
+    height:100%;
+    width:100%;
+    margin-top: 1em;
+
+}
+
+#whoWon {
+    position: relative;
+    background-color: #990033;
+    height: 30px;
+    text-align: center;
+    color:whitesmoke;
+    font-size: 20px;
+    width: 5em;
+
+}
+#redCounter {
+    position: relative;
+    left: 35%;
+    padding: 3%;
+    height: 25px;
+    background-color:red;
+    width: 30px;
+    margin-bottom: 1em;
+    text-align: center;
+    color:whitesmoke;
+    font-size: 20px;
+
+}
+
+#blueCounter {
+    position: relative;
+    left: 30%;
+    padding: 3%;
+    height: 25px;
+    background-color:blue;
+    width: 30px;
+    margin-bottom: 1em;
+    text-align: center;
+    color:whitesmoke;
+    font-size: 20px;
+}
+
+#game_info {
+    position: relative;
+    left: 32%;
+    font-size: 20px;
+    color: whitesmoke;
+    width: 25%;
+    text-shadow:1px 1px 0 #666;
+}
+
+#btn {
+    background-color:#990033;
+    border: none;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 10px;
+    cursor: pointer;
+    position: relative;
+    left: 39%;
+    color: whitesmoke;
+
+}
+
+#btn:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: left;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #990033;
+    color:whitesmoke;
+
+}
