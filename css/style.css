@@ -119,6 +119,7 @@ nav {
     padding: 1em;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    background-color: rgb(94, 113, 197);/
 }
 
 .board > div {
@@ -129,6 +130,7 @@ nav {
     justify-content: center;
     cursor: pointer;
     transition: transform 0.3s ease;
+    
 }
 
 .board > div:hover {
@@ -136,11 +138,22 @@ nav {
 }
 
 .player1 {
-    background-image: url(backgroundImage.jpg);
+    background-image: url('Red-circle.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
 }
 
+
 .player2 {
-    background-image: url(test.jpg);
+    background-image: url('Blue-X.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
 }
 
 /* Info Section */
