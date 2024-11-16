@@ -9,43 +9,67 @@
     <title>Tic Tac Toe Game</title>
 </head>
 <body>
-<header><h1>Tic Tac Toe Game</h1></header>
-<main>
-    <nav>
-<div id ="turn">Current Turn:</div>
-<div id ="current_player">Red Player</div>
-    </nav>
+    <main>
+        <menu>
+            <a href="#home">Home</a>
+            <a href="#game">Play Game</a>
+            <a href="#about">About</a>
+        </menu>
+    
+        <header><h1>Tic Tac Toe</h1></header>
+        
+        <div class="container">
+            <!-- Game Rules Box -->
+            <aside class="rules-box">
+                <h2>Game Rules</h2>
+                <ul>
+                    <li>Players take turns marking a square.</li>
+                    <li>There are two players. Player Red and Player Blue</li>
+                    <li>The first to get 3 squares in a row wins.</li>
+                    <li>If all squares are filled without a winner, it’s a draw.</li>
+                    <li>Winning player always goes second.</li>
+                    <li>No timer</li>
+                </ul>
+            </aside>
+    
+            <!-- Main Game Area -->
+            <section class="game-area">
+                <nav>
+                    <div id="current_player">Red Player</div>
+                </nav>
+    
+                <section class="board">
+                    <div class="" id="1"></div>
+                    <div class="" id="2"></div>
+                    <div class="" id="3"></div>
+                    <div class="" id="4"></div>
+                    <div class="" id="5"></div>
+                    <div class="" id="6"></div>
+                    <div class="" id="7"></div>
+                    <div class="" id="8"></div>
+                    <div class="" id="9"></div>
+                </section>
+    
+                <section class="info_field">
+                    <div id="whoWon">Game On</div>
+                    <div id="redCounter"></div>
+                    <div id="blueCounter"></div>
+                </section>
+    
 
-<!--Board code-->
-    <section class="board">
-        <div class="" id="1"></div>
-        <div class="" id="2"></div>
-        <div class="" id="3"></div>
-        <div class="" id="4"></div>
-        <div class="" id="5"></div>
-        <div class="" id="6"></div>
-        <div class="" id="7"></div>
-        <div class="" id="8"></div>
-        <div class="" id="9"></div>
-    </section>
+                
+                <button id="refreshBtn">Refresh</button>
+            </section>
+        </div>
+    
+        <footer>
+            <div id="footer">Developed by <a href="https://github.com/hpapucha">Hristo Papucharov</a>,
+                <a href="https://www.linkedin.com/in/hristo-papucharov-76739b194/">LinkedIn</a>
+            </div>
+        </footer>
 
-    <section class="info_field">
-        <div id="whoWon">Game On</div>
-        <div id="redCounter"></div>
-        <div id="blueCounter"></div>
-    </section>
-
-    <section>
-        <div id="game_info">Winning side always goes second. Enjoy!</div>
-    </section>
-    <button id="btn">Refresh</button>
-
-    <footer>
-        <div id ="footer">Developed by <a href="https://github.com/hpapucha">Hristo Papucharov</a>,
-        <a href="https://www.linkedin.com/in/hristo-papucharov-76739b194/">LinkedIn</a></div>
-    </footer>
-</main>
-<aside></aside>
+        
+    </main>
 <script src ="script.js"></script>
 </body>
 </html>

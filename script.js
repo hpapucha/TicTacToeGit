@@ -6,7 +6,7 @@ displayCurrentPlayer = document.querySelector('#current_player');
 whoWon = document.querySelector('#whoWon');
 redCounter = document.querySelector('#redCounter');
 blueCounter = document.querySelector('#blueCounter');
-refreshButton = document.querySelector('#btn');
+refreshButton = document.querySelector('#refreshBtn');
 let currentPlayer = "Red Player"; //Inner HTML variables
 let whoWonInitial = "No winner!";
 let redCount = 0; //Counters for red and blue
@@ -119,10 +119,12 @@ function divsArray(e) {
 }
 //Button event listener and reset function which reinit event listeners and reset
 //div classes
-document.querySelector("#btn").addEventListener("click", reset);
+document.querySelector("#refreshBtn").addEventListener("click", reset);
 function reset() {
   listen()
   {
     for (let i = 0; i < divs.length; i++) {
       divs[i].className = "";
     }}}
+
+    

@@ -1,167 +1,236 @@
-body{
+body {
     background-color: #c79f00;
-    background-image: url(alum.png);
+    background-image: url(backgroundImage.jpg);
+    background-size: cover;
+    background-position: center;
     font-family: Helvetica, sans-serif;
-    height:100%;
-    width:100%;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
 }
 
-h1{
-    color:whitesmoke;
-    position: relative;
-    left: 35%;
-    text-shadow:3px 1px 0 #666;
+h1 {
+    color: whitesmoke;
+    text-align: center;
+    text-shadow: 3px 1px 0 #666;
+    margin: 1em 0;
+}
+
+/* Navigation Bar */
+menu {
+    background-color: #a91b1b;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+}
+
+menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+menu a:hover {
+    background-color: #575757;
 }
 
 nav {
-    position: relative;
-    left: 35%;
-    display: grid;
-    grid-template-columns: repeat(3, 5em);
-    grid-gap: 0.5em;
-    height:100%;
-    width:100%;
-    margin-bottom: 0.3em;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-bottom: 1em;
 }
 
 #turn {
-    position: relative;
-    padding: 2%;
-    height: 25px;
-    background-color:#990033;
-    width: 12em;
+    background-color: #990033;
+    color: whitesmoke;
+    padding: 0.5em;
     margin-bottom: 1em;
-    color:whitesmoke;
-    font-size: 20px;
-}
-#current_player{
-    position: relative;
-    left: 45%;
-    padding: 2%;
-    height: 25px;
-    background-color:#990033;
-    width: 6.7em;
-    margin-bottom: 1em;
-    color:whitesmoke;
-    font-size: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 5px;
 }
 
+#current_player {
+    background-color: #990033;
+    color: whitesmoke;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2em;
+    margin: 1em auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Game Rules Box Styling */
+.rules-box {
+    background-color: #990033;
+    color: whitesmoke;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 0 0 200px;
+}
+
+.rules-box h2 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.rules-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.rules-box li {
+    margin-bottom: 0.5em;
+    font-size: 1em;
+}
+
+/* Main Game Area */
+.game-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .board {
-    position: relative;
-    left: 35%;
     display: grid;
-    grid-template-columns: repeat(3, 5em);
-    grid-gap: 0.5em;
-    height:100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5em;
     width: 100%;
-
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 .board > div {
     border: 2px solid #990033;
-    height:5em;
-    width:5em;
-    text-align: center;
-
-}
-
-.player1 {
-   background-color: red;
-}
-.player2 {
-   background-color: blue;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .board > div:hover {
     transform: scale(1.1);
 }
 
-.info_field {
-    position: relative;
-    left: 35%;
-    display: grid;
-    grid-template-columns: repeat(3, 5em);
-    grid-gap: 0.5em;
-    height:100%;
-    width:100%;
-    margin-top: 1em;
+.player1 {
+    background-image: url(backgroundImage.jpg);
+}
 
+.player2 {
+    background-image: url(test.jpg);
+}
+
+/* Info Section */
+.info_field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    margin-top: 1em;
 }
 
 #whoWon {
-    position: relative;
     background-color: #990033;
-    height: 30px;
+    color: whitesmoke;
+    padding: 0.5em;
     text-align: center;
-    color:whitesmoke;
-    font-size: 20px;
-    width: 5em;
-
+    font-size: 1.2em;
+    border-radius: 5px;
 }
-#redCounter {
-    position: relative;
-    left: 35%;
-    padding: 3%;
-    height: 25px;
-    background-color:red;
-    width: 30px;
-    margin-bottom: 1em;
-    text-align: center;
-    color:whitesmoke;
-    font-size: 20px;
 
+#redCounter, #blueCounter {
+    background-color: red;
+    color: whitesmoke;
+    width: 2.5em;
+    height: 2.5em;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #blueCounter {
-    position: relative;
-    left: 30%;
-    padding: 3%;
-    height: 25px;
-    background-color:blue;
-    width: 30px;
-    margin-bottom: 1em;
-    text-align: center;
-    color:whitesmoke;
-    font-size: 20px;
+    background-color: blue;
 }
 
-#game_info {
-    position: relative;
-    left: 32%;
-    font-size: 20px;
-    color: whitesmoke;
-    width: 25%;
-    text-shadow:1px 1px 0 #666;
-}
-
-#btn {
-    background-color:#990033;
+/* Button Styling */
+#refreshBtn {
+    background-color: #990033;
     border: none;
-    padding: 15px 32px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px 10px;
+    padding: 0.8em 2em;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 1em;
     cursor: pointer;
-    position: relative;
-    left: 39%;
     color: whitesmoke;
-
+    display: block;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
 }
 
-#btn:hover {
+#refreshBtn:hover {
     transform: scale(1.1);
 }
 
+/* Footer */
 footer {
-    text-align: left;
-    position: fixed;
-    left: 0;
+    text-align: center;
     bottom: 0;
+    position: fixed;
     width: 100%;
     background-color: #990033;
-    color:whitesmoke;
+    color: whitesmoke;
+    padding: 0.5em;
+}
 
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rules-box {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .board {
+        grid-template-columns: repeat(3, 3.5em);
+    }
+
+    #refreshBtn {
+        padding: 0.5em 1.5em;
+    }
+    
+    menu a {
+        padding: 8px;
+    }
 }
