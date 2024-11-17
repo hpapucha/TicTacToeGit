@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    /* background-color: #c79f00; */
+    background-image: url(blue.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: whitesmoke;
+    text-align: center;
+    text-shadow: 3px 1px 0 #666;
+    margin: 1em 0;
+    
+}
+
+h2, h3 {
+    color: #fff;
+    text-align: center;
+}
+
+/* Navigation Bar */
+menu {
+    background-color: #a91b1b;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+    margin: 0;
+}
+
+menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+menu a:hover {
+    background-color: #575757;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2em;
+    margin: 2em auto;
+    width: 90%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+/* Introduction Section */
+.intro-box {
+    background-color: #990033;
+    color: whitesmoke;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px;
+}
+
+.image-box {
+    text-align: center;
+    flex: 1;
+    min-width: 280px;
+}
+
+.game-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 1em;
+}
+
+/* Features Section */
+.features {
+    background-color: #a91b1b;
+    color: whitesmoke;
+    padding: 2em;
+    border-radius: 8px;
+    margin: 2em auto;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features li {
+    margin: 0.5em 0;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 2em;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+    margin-top: 1em;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #990033;
+    color: whitesmoke;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}

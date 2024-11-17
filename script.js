@@ -8,8 +8,9 @@ redCounter = document.querySelector('#redCounter');
 blueCounter = document.querySelector('#blueCounter');
 refreshButton = document.querySelector('#refreshBtn');
 let currentPlayer = "Red Player"; //Inner HTML variables
-let whoWonInitial = "No winner!"; //Inner HTML variables
-//Initializing variables for local storage
+let whoWonInitial = "No winner!";
+// let redCount = 0; //Counters for red and blue
+// let blueCount = 0;
 let redCount = localStorage.getItem('redWins') ? parseInt(localStorage.getItem('redWins')) : 0;
 let blueCount = localStorage.getItem('blueWins') ? parseInt(localStorage.getItem('blueWins')) : 0;
 
@@ -33,97 +34,64 @@ function removeEventListeners()
 //Call event listeners and start the game logic
 listen();
 
-function divsArray(e) {
+function highlightWinner(winner) {
+  whoWon.classList.add('highlight');
+  setTimeout(() => {
+    whoWon.classList.remove('highlight');
+  }, 7500); // Duration matches 3 cycles of 0.8s animation
+}
 
+function divsArray(e) {
   let divsArray = Array.from(divs);
   let index = divsArray.indexOf(e.target);
 
   displayCurrentPlayer.innerHTML = currentPlayer;
-//This adds the css style to the click event plus updating current player
+
+  // Add the class based on the current player
   if (currentPlayer === "Red Player") {
-    divs[index].classList.add("player1")
-    currentPlayer = "Blue Player"
+    divs[index].classList.add("player1");
+    currentPlayer = "Blue Player";
+  } else {
+    divs[index].classList.add("player2");
+    currentPlayer = "Red Player";
   }
-  else if (currentPlayer === "Blue Player") {
-    divs[index].classList.add("player2")
-    currentPlayer = "Red Player"
-  }
-  else {
-    console.log("Player error");
-  }
-//Win conditions
+
   whoWon.innerHTML = whoWonInitial;
-  //Index 0 Row
-  if (divs[0].classList.contains("player1") && divs[1].classList.contains("player1") && divs[2].classList.contains("player1")) {
-    whoWon.innerHTML = "Red Won!"
-  }
-  else if(divs[0].classList.contains("player2") && divs[1].classList.contains("player2") && divs[2].classList.contains("player2")){
-    whoWon.innerHTML = "Blue Won!"
-  }
-  //Index 0-8 Vertical
-  else if(divs[0].classList.contains("player1") && divs[4].classList.contains("player1") && divs[8].classList.contains("player1")){
-  whoWon.innerHTML = "Red Won!"
-  }
-  else if(divs[0].classList.contains("player2") && divs[4].classList.contains("player2") && divs[8].classList.contains("player2")){
-    whoWon.innerHTML = "Blue Won!"
-  }
-  //Index 0 Column
-  else if(divs[0].classList.contains("player1") && divs[3].classList.contains("player1") && divs[6].classList.contains("player1")){
-    whoWon.innerHTML = "Red Won!"
-  }
-  else if(divs[0].classList.contains("player2") && divs[3].classList.contains("player2") && divs[6].classList.contains("player2")){
-    whoWon.innerHTML = "Blue Won!"
-  }
-  //Index 1 Column
-  else if(divs[1].classList.contains("player1") && divs[4].classList.contains("player1") && divs[7].classList.contains("player1")){
-    whoWon.innerHTML = "Red Won!"
-  }
-  else if(divs[1].classList.contains("player2") && divs[4].classList.contains("player2") && divs[7].classList.contains("player2")){
-    whoWon.innerHTML = "Blue Won!"
-  }
-  //Index 2-6 Vertical
-  else if(divs[2].classList.contains("player1") && divs[4].classList.contains("player1") && divs[6].classList.contains("player1")){
-    whoWon.innerHTML = "Red Won!"
-  }
-  else if(divs[2].classList.contains("player2") && divs[4].classList.contains("player2") && divs[6].classList.contains("player2")){
-    whoWon.innerHTML = "Blue Won!"
-  }
-  //Index 2 Column
-  else if(divs[2].classList.contains("player1") && divs[5].classList.contains("player1") && divs[8].classList.contains("player1")){
-    whoWon.innerHTML = "Red Won!"
-  }
-  else if(divs[2].classList.contains("player2") && divs[5].classList.contains("player2") && divs[8].classList.contains("player2")){
-    whoWon.innerHTML = "Blue Won!"
-  }
-  //Index 3 Row
-  else if(divs[3].classList.contains("player1") && divs[4].classList.contains("player1") && divs[5].classList.contains("player1")){
-    whoWon.innerHTML = "Red Won!"
-  }
-  else if(divs[3].classList.contains("player2") && divs[4].classList.contains("player2") && divs[5].classList.contains("player2")){
-    whoWon.innerHTML = "Blue Won!"
-  }
-  //Index 6 Row
-  else if(divs[6].classList.contains("player1") && divs[7].classList.contains("player1") && divs[8].classList.contains("player1")){
-    whoWon.innerHTML = "Red Won!"
-  }
-  else if(divs[6].classList.contains("player2") && divs[7].classList.contains("player2") && divs[8].classList.contains("player2")){
-    whoWon.innerHTML = "Blue Won!"
-  }
-  //If a winner is decided increment the red/blue counters
-  if (whoWon.innerText === "Red Won!"){
+
+  // Check win conditions and highlight the winner
+  if (
+    (divs[0].classList.contains("player1") && divs[1].classList.contains("player1") && divs[2].classList.contains("player1")) ||
+    (divs[0].classList.contains("player1") && divs[4].classList.contains("player1") && divs[8].classList.contains("player1")) ||
+    (divs[0].classList.contains("player1") && divs[3].classList.contains("player1") && divs[6].classList.contains("player1")) ||
+    (divs[1].classList.contains("player1") && divs[4].classList.contains("player1") && divs[7].classList.contains("player1")) ||
+    (divs[2].classList.contains("player1") && divs[4].classList.contains("player1") && divs[6].classList.contains("player1")) ||
+    (divs[2].classList.contains("player1") && divs[5].classList.contains("player1") && divs[8].classList.contains("player1")) ||
+    (divs[3].classList.contains("player1") && divs[4].classList.contains("player1") && divs[5].classList.contains("player1")) ||
+    (divs[6].classList.contains("player1") && divs[7].classList.contains("player1") && divs[8].classList.contains("player1"))
+  ) {
+    whoWon.innerHTML = "Red Won!";
+    highlightWinner("Red");
     redCount += 1;
     redCounter.innerText = redCount;
-    localStorage.setItem('redWins', redCount); // Save to local storage
-    removeEventListeners()
-
-  }
-  else if(whoWon.innerText === "Blue Won!"){
+    localStorage.setItem('redWins', redCount);
+    removeEventListeners();
+  } else if (
+    (divs[0].classList.contains("player2") && divs[1].classList.contains("player2") && divs[2].classList.contains("player2")) ||
+    (divs[0].classList.contains("player2") && divs[4].classList.contains("player2") && divs[8].classList.contains("player2")) ||
+    (divs[0].classList.contains("player2") && divs[3].classList.contains("player2") && divs[6].classList.contains("player2")) ||
+    (divs[1].classList.contains("player2") && divs[4].classList.contains("player2") && divs[7].classList.contains("player2")) ||
+    (divs[2].classList.contains("player2") && divs[4].classList.contains("player2") && divs[6].classList.contains("player2")) ||
+    (divs[2].classList.contains("player2") && divs[5].classList.contains("player2") && divs[8].classList.contains("player2")) ||
+    (divs[3].classList.contains("player2") && divs[4].classList.contains("player2") && divs[5].classList.contains("player2")) ||
+    (divs[6].classList.contains("player2") && divs[7].classList.contains("player2") && divs[8].classList.contains("player2"))
+  ) {
+    whoWon.innerHTML = "Blue Won!";
+    highlightWinner("Blue");
     blueCount += 1;
     blueCounter.innerText = blueCount;
-    localStorage.setItem('blueWins', blueCount); // Save to local storage
-    removeEventListeners()
+    localStorage.setItem('blueWins', blueCount);
+    removeEventListeners();
   }
-
 }
 //Button event listener and reset function which reinit event listeners and reset
 //div classes
@@ -140,7 +108,6 @@ function reset() {
 
 // Select the clear storage button
 const clearStorageButton = document.querySelector('#clearStorageBtn');
-
 // Add event listener to clear local storage
 clearStorageButton.addEventListener('click', function () {
     // Clear local storage
@@ -151,6 +118,7 @@ clearStorageButton.addEventListener('click', function () {
     blueCount = 0;
     redCounter.innerText = redCount;
     blueCounter.innerText = blueCount;
+
 });
 
     

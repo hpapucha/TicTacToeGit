@@ -1,6 +1,6 @@
 body {
     background-color: #c79f00;
-    background-image: url(backgroundImage.jpg);
+    background-image: url(blue.jpg);
     background-size: cover;
     background-position: center;
     font-family: Helvetica, sans-serif;
@@ -23,6 +23,8 @@ menu {
     overflow: hidden;
     text-align: center;
     padding: 10px;
+    display: inline-block;
+    margin: 0;
 }
 
 menu a {
@@ -137,6 +139,10 @@ nav {
     transform: scale(1.1);
 }
 
+.game-area {
+    background-color: rgb(94, 113, 197);/
+}
+
 .player1 {
     background-image: url('Red-circle.svg');
     background-size: contain;
@@ -175,6 +181,20 @@ nav {
     border-radius: 5px;
 }
 
+/* Animation for the winning message */
+.highlight {
+    animation: highlight-blink 1.5s ease-in-out 5;
+    color: yellow;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  
+  /* Keyframes for blinking effect */
+  @keyframes highlight-blink {
+    0%, 100% { color: yellow; transform: scale(1); }
+    50% { color: red; transform: scale(1.2); }
+  }
+
 #redCounter, #blueCounter {
     background-color: red;
     color: whitesmoke;
@@ -207,6 +227,24 @@ nav {
 }
 
 #refreshBtn:hover {
+    transform: scale(1.1);
+}
+
+#clearStorageBtn {
+    background-color: #990033;
+    border: none;
+    padding: 0.8em 2em;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 1em;
+    cursor: pointer;
+    color: whitesmoke;
+    display: block;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+}
+
+#clearStorageBtn {
     transform: scale(1.1);
 }
 
@@ -247,3 +285,4 @@ footer {
         padding: 8px;
     }
 }
+
