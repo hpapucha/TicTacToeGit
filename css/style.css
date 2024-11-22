@@ -36,7 +36,7 @@ menu a {
 }
 
 menu a:hover {
-    background-color: #575757;
+    background-color: #0056b3;
 }
 
 nav {
@@ -65,6 +65,7 @@ nav {
     text-align: center;
     font-size: 1.2em;
     border-radius: 5px;
+    margin-top: 2em;
 }
 
 .container {
@@ -242,9 +243,10 @@ nav {
     display: block;
     transition: transform 0.3s ease;
     border-radius: 5px;
+    margin-bottom: 2em;
 }
 
-#clearStorageBtn {
+#clearStorageBtn:hover {
     transform: scale(1.1);
 }
 
