@@ -1,6 +1,5 @@
 /* General Styles */
 body {
-    /* background-color: #c79f00; */
     background-image: url(blue.jpg);
     background-size: cover;
     background-position: center;
@@ -84,7 +83,7 @@ menu a:hover {
 
 /* Features Section */
 .features {
-    background-color: #a91b1b;
+    background-color: #990033;
     color: whitesmoke;
     padding: 2em;
     border-radius: 8px;
@@ -108,20 +107,30 @@ menu a:hover {
 .gallery {
     padding: 2em;
     text-align: center;
-    background-color: rgb(52, 104, 172)
+    background: linear-gradient(to bottom, rgb(52, 104, 172), rgba(52, 104, 172, 0));
+
 }
 
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5em;
-    margin-top: 1em;
+    gap: 3em;
+    margin-top: 5em;
+    margin-left: 10em;
+    margin-bottom: 5em;
+    
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.1);
+    background-color:white;
 }
 
 .gallery-grid img {
-    width: 100%;
+    width: 75%;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color:rgb(77, 124, 185)
 }
 
 /* Footer */
@@ -154,6 +163,14 @@ footer {
     max-width: 500px;
 }
 
+.content-box.open{
+    background-color: rgb(52, 104, 172);
+}
+
+.text-content p{
+    color: white;
+}
+
 /* Buttons */
 .toggle-button, .download-button {
     padding: 10px 20px;
@@ -167,7 +184,7 @@ footer {
 }
 
 .toggle-button {
-    background-color: #007BFF;
+    background-color: #990033;
     color: white;
     transition: background-color 0.3s ease;
 }
@@ -177,7 +194,7 @@ footer {
 }
 
 .download-button {
-    background-color: #28a745;
+    background-color: #990033;
     color: white;
     transition: background-color 0.3s ease;
 }

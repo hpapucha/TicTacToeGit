@@ -1,0 +1,25 @@
+<gameArea>
+    <navigation>
+        <currentPlayer>Red Player</currentPlayer>
+    </navigation>
+    <board>
+        <cell id="1" />
+        <cell id="2" />
+        <cell id="3" />
+        <cell id="4" />
+        <cell id="5" />
+        <cell id="6" />
+        <cell id="7" />
+        <cell id="8" />
+        <cell id="9" />
+    </board>
+    <infoField>
+        <whoWon>Game On</whoWon>
+        <redCounter />
+        <blueCounter />
+    </infoField>
+    <buttons>
+        <refreshButton>Refresh</refreshButton>
+        <clearHistoryButton>Clear History</clearHistoryButton>
+    </buttons>
+</gameArea>

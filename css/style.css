@@ -1,6 +1,6 @@
 body {
-    background-color: #c79f00;
-    background-image: url(blue.jpg);
+    /* background-color: #c79f00; */
+    background-image: url(blue.png);
     background-size: cover;
     background-position: center;
     font-family: Helvetica, sans-serif;
@@ -140,7 +140,7 @@ nav {
 }
 
 .game-area {
-    background-color: rgb(94, 113, 197);/
+    background-color: rgb(52, 104, 172);
 }
 
 .player1 {
