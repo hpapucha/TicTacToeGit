@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/homestyle.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <main>
+        <menu>
+            <a href="home.html">Home</a>
+            <a href="index.html">Game</a>
+            <a href="download.html">Download</a>
+        </menu>
+        <header>
+            <h1>Welcome to Tic Tac Toe</h1>
+            <h3>You can choose to download a sample code structure of Tic Tac Toe from the following XML and HTML templates</h3>
+        </header>
+
+        <div class="container">
+            <section class="expandable-section">
+                <button id="toggleButton1" class="toggle-button">Download XML</button>
+                <div id="expandableContent" class="content-box">
+                    <div class="text-content" id="textContent">
+                        <p>
+                            Click the button below to show the sample code.
+                        </p>
+                        <a id="downloadButton" class="download-button" href="example-file.txt" download>
+                            Show Code
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="expandable-section">
+                <button id="toggleButton2" class="toggle-button">Download HTML</button>
+                <div id="expandableContent" class="content-box">
+                    <div class="text-content" id="textContent">
+                        <p>
+                            Click the button below to show the sample code.
+                        </p>
+                        <a id="downloadButton" class="download-button" href="example-file.txt" download>
+                            Show Code
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+        <section class="gallery">
+            <h2>Tic Tac Toe Game Variations</h2>
+            <div class="gallery-grid">
+                <img src="css/tic-tac-toe-game.svg" alt="Game Screenshot 1">
+                <img src="css/Tic_tac_toe-game-2.svg" alt="Game Screenshot 2">
+                <img src="css/tic-tac-toe-game-3.svg" alt="Game Screenshot 3">
+                <img src="css/Tic-tac-toe-game4.svg" alt="Game Screenshot 4">
+            </div>
+        </section>
+        <footer>
+            <div>Developed by <a href="https://github.com/hpapucha">Hristo Papucharov</a></div>
+        </footer>
+    </main>
+    <script src="download.js"></script>
+</body>
+</html>

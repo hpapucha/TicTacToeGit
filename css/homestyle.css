@@ -146,3 +146,64 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Expandable Section */
+.expandable-section {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Buttons */
+.toggle-button, .download-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.toggle-button {
+    background-color: #007BFF;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: #0056b3;
+}
+
+.download-button {
+    background-color: #28a745;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #1e7e34;
+}
+
+/* Animated Collapsible Content */
+.content-box {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    padding: 0;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.content-box.open {
+    max-height: 200px;
+    padding: 20px;
+}
+
+.text-content {
+    display: none;
+}
