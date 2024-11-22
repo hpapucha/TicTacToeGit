@@ -65,6 +65,7 @@ menu a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex: 1;
     min-width: 280px;
+    text-align: center;
 }
 
 .image-box {
@@ -107,6 +108,7 @@ menu a:hover {
 .gallery {
     padding: 2em;
     text-align: center;
+    background-color: rgb(52, 104, 172)
 }
 
 .gallery-grid {
