@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <link-rel>CSS Stylesheet</link-rel>
+            <title>Tic Tac Toe Game</title>
+        </head>
+        <body>
+            <main>
+                <menu>
+                    <item href="home.html">Home</item>
+                    <item href="index.html">Game</item>
+                    <item href="download.html">Download</item>
+                </menu>
+                <header>
+                    <title>Tic Tac Toe</title>
+                </header>
+                <container class="rules">
+                        <title>Game Rules</title>
+                        <rules>
+                            <rule>Players take turns marking a square.</rule>
+                            <rule>There are two players. Player Red and Player Blue</rule>
+                            <rule>The first to get 3 squares in a row wins.</rule>
+                            <rule>If all squares are filled without a winner, it’s a draw.</rule>
+                            <rule>Winning player always goes second.</rule>
+                            <rule>No time limit</rule>
+                        </rules>
+                </container>
+                <container class="game-area">
+                        <info-field class="current_player">
+                            <current-player id="current_player">Red Player</current-player>
+                        </info-field>
+                        <board class="board">
+                            <square id="square1"/>
+                            <square id="square2"/>
+                            <square id="square3"/>
+                            <square id="square4"/>
+                            <square id="square5"/>
+                            <square id="square6"/>
+                            <square id="square7"/>
+                            <square id="square8"/>
+                            <square id="square9"/>
+                        </board>
+                        <info-field class="buttons">
+                            <status id="whoWon">Game On</status>
+                            <red-counter id="redCounter" />
+                            <blue-counter id="blueCounter" />
+                        </info-field>
+                        <button id="refreshBtn">Refresh</button>
+                        <button id="clearStorageBtn">Clear History</button>
+                </container>
+                <footer>
+                    <developer id="footer">
+                    <info>
+                        Developed by 
+                        <link href="https://github.com/hpapucha">Hristo Papucharov</link>
+                        
+                            Tic Tac Toe 
+                            <link href="https://en.wikipedia.org/wiki/Tic-tac-toe">Wikipedia</link>
+                    </info>
+                    </developer>
+                </footer>
+            </main>
+           <script-src>Script</script-src>
+        </body>
+    </html>
+</document>
