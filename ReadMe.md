@@ -4,7 +4,7 @@ Goal
 - To create a Tic Tac Toe game, played by two players on the same
 computer. To create a Tic Tac Toe game using markup languages which will help digitalize the well-known game of
 Tic-Tac-Toe
-<a href="https://github.com/hpapucha/TicTacToeGit">Link Here</a>
+<a href="https://hpapucha.github.io/TicTacToeGit/">Link Here</a>
 
 Deliverables: 
 Bronze MVP: 
