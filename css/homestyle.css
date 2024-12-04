@@ -133,6 +133,20 @@ menu a:hover {
     background-color:rgb(77, 124, 185)
 }
 
+figcaption {
+    padding-top: 3em;
+    font-size: 30px;
+    color:white;
+}
+
+figcaption:hover {
+    transform: scale(1.1);
+}
+
+a {
+    text-decoration: none;
+}
+
 /* Footer */
 footer {
     background-color: #990033;
