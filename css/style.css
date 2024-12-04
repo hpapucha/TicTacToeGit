@@ -110,6 +110,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 10em;
 }
 
 .board {
@@ -213,7 +214,7 @@ nav {
 }
 
 /* Button Styling */
-#refreshBtn {
+.refreshBtn {
     background-color: #990033;
     border: none;
     padding: 0.8em 2em;
@@ -227,11 +228,11 @@ nav {
     border-radius: 5px;
 }
 
-#refreshBtn:hover {
+.refreshBtn:hover {
     transform: scale(1.1);
 }
 
-#clearStorageBtn {
+.clearStorageBtn {
     background-color: #990033;
     border: none;
     padding: 0.8em 2em;
@@ -246,8 +247,18 @@ nav {
     margin-bottom: 2em;
 }
 
-#clearStorageBtn:hover {
+.clearStorageBtn:hover {
     transform: scale(1.1);
+}
+
+/* Joke */
+.joke {
+    background-color:#990033;
+    color: white;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
@@ -279,7 +290,7 @@ footer {
         grid-template-columns: repeat(3, 3.5em);
     }
 
-    #refreshBtn {
+    .refreshBtn {
         padding: 0.5em 1.5em;
     }
     

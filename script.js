@@ -13,6 +13,7 @@ let whoWonInitial = "No winner!";
 // let blueCount = 0;
 let redCount = localStorage.getItem('redWins') ? parseInt(localStorage.getItem('redWins')) : 0;
 let blueCount = localStorage.getItem('blueWins') ? parseInt(localStorage.getItem('blueWins')) : 0;
+document.getElementById('jokeBtn').addEventListener('click', fetchJoke);
 
 // Display the initial counts
 redCounter.innerText = redCount;
@@ -120,5 +121,24 @@ clearStorageButton.addEventListener('click', function () {
     blueCounter.innerText = blueCount;
 
 });
+
+//JokeAPI function
+function fetchJoke() {
+    const jokeContainer = document.getElementById('jokeContainer');
+    jokeContainer.textContent = 'And...';
+    fetch('https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single') // API URL for single-line jokes
+        .then(response => response.json())
+        .then(data => {
+            if (data.type === 'single') {
+                jokeContainer.textContent = data.joke;
+            } else {
+                jokeContainer.textContent = 'Joke Error';
+            }
+        })
+        .catch(error => {
+            jokeContainer.textContent = 'Error';
+        });
+}
+
 
     

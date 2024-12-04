@@ -25,11 +25,11 @@
                 <h2>Game Rules</h2>
                 <ul>
                     <li>Players take turns marking a square.</li>
-                    <li>There are two players. Player Red and Player Blue</li>
+                    <li>There are two players. Player Red and Player Blue.</li>
                     <li>The first to get 3 squares in a row wins.</li>
                     <li>If all squares are filled without a winner, it’s a draw.</li>
-                    <li>Winning player always goes second.</li>
-                    <li>No time limit</li>
+                    <li>Red Circle always goes first.</li>
+                    <li>No time limit.</li>
                 </ul>
             </aside>
     
@@ -54,8 +54,14 @@
                     <div id="redCounter"></div>
                     <div id="blueCounter"></div>
                 </section>
-                <button id="refreshBtn">Refresh</button>
-                <button id="clearStorageBtn">Clear History</button>
+                <button class="refreshBtn" id="refreshBtn">Refresh</button>
+                <button class="clearStorageBtn" id="clearStorageBtn">Clear History</button>
+                <!-- Joke API area -->
+                <div class="info_field">
+                    <button class="refreshBtn" id="jokeBtn">Are you Bored?</button>
+                    <div class="joke" id="jokeContainer"></div>
+                </div>
+
             </section>
         </div>
         <!-- Footer Area -->
